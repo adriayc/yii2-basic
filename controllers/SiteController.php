@@ -125,4 +125,14 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    /**
+     * @param string $message
+     * @return string
+     * URL: http://localhost:8888/index.php?r=site/say&message=Hello+World
+     */
+    public function actionSay($message = 'Hola')
+    {
+        return $this->render('say', ['message' => $message]);
+    }
 }
